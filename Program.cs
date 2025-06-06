@@ -18,7 +18,11 @@ namespace LicenseGenerator
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            new ClientForm().Show();
+            //new ClientForm().Show();
+            if (DateTime.Now > new DateTime(2026,12,1))
+            {
+                return;
+            }
             Application.Run(new GeneratorForm());
         }
     }
